@@ -1,10 +1,19 @@
-# Gestion de Bibliothèque
+# Gestion de Paring
 
 ## Consigne
 
-sqlite et librairies static en C
+sqlite et librairies static en C ( libparking.a )
 
-Librairie static (fonction de la bibliothèque) :
+Librairie static (fonctions de gestions) :
 
-- [ ]  place : attribution de places
-- [ ]  facture : facturation en fonction du temps passer
+- [ ]  place : attribution de places et retait d'attribution par facture
+- [ ]  factures : facturation en fonction du temps passer et du type de véhicule
+
+## Spécifications
+
+- IL y a 6 place maximum par type d'engin
+  - Voiture
+  - Moto
+  - Camion
+
+## L'exécutable se trouve dans le dossier /functions

@@ -28,7 +28,7 @@ int	main(int argc, char *argv[])
 			printf("3 - Camion \n");
 			printf("=> ");
 			scanf("%s", livre);
-			place(atoi(livre));
+			place(atoi(livre), 0);
 			break ;
 		case 2:
 			printf("Le type de place(1,2,3)\n");

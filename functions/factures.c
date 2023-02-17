@@ -76,6 +76,9 @@ int	factures(int a, int b)
 	}
 
 	sqlite3_close(db);
+	
+	place(a, 1);
+	
 	return (0);
 }
 
