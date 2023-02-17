@@ -5,26 +5,27 @@
 
 int	main(int argc, char *argv[])
 {
-	char *choix;
+	char choix[100];
 	char ident[100];
 	char livre[100];
 
 	printf("Menu : \n");
-	printf("1 - Liste de livre : \n");
-	//scanf("Choix %s", choix);
-	choix = "1";
+	printf("1 - Affecter une nouvelle place : \n");
+	printf("2 - Affecter une nouvelle place : \n");
+	scanf("%s", choix);
 
 	switch (atoi(choix))
 	{
 	case 1:
-		printf("la Place ");
-		scanf("%s", ident);
-
 		printf("L'id de la place ");
 		scanf("%s", livre);
 
-		place(atoi(ident), atoi(livre));
+		verif(atoi(livre));
 		break ;
+
+	//case 2:
+		//printf("%d", verif(1));
+		//verif(1);
 	}
 
 	return (0);
