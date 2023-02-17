@@ -1,23 +1,29 @@
+#include "../sqlite/sqlite3.h"
 #include "header.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	char * choix;
-	char nom[100];
+	char *choix;
+	char ident[100];
 	char livre[100];
-	char auteur[100];
-	char id[100];
+
 	printf("Menu : \n");
 	printf("1 - Liste de livre : \n");
-	scanf("Choix %s\n", choix);
+	//scanf("Choix %s", choix);
+	choix = "1";
 
-	switch (choix)
+	switch (atoi(choix))
 	{
 	case 1:
-		scanf("Id %s\n", id);
-		scanf("Type %s\n", livre);
-		place(atoi(id), atoi(livre));
+		printf("la Place ");
+		scanf("%s", ident);
+
+		printf("L'id de la place ");
+		scanf("%s", livre);
+
+		place(atoi(ident), atoi(livre));
 		break ;
 	}
 

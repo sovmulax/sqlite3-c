@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int	place(int a, int b)
+int	verif(int a, int b)
 {
 	sqlite3 *db;
 	char *err_msg = 0;
