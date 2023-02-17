@@ -1,2 +1,2 @@
-int	factures(int a);
-int	place(int a);
+int	factures(int a, int b);
+int	place(int az);
