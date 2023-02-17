@@ -8,25 +8,31 @@ int	main(int argc, char *argv[])
 	char choix[100];
 	char ident[100];
 	char livre[100];
+	int boo = 1;
 
-	printf("Menu : \n");
-	printf("1 - Affecter une nouvelle place : \n");
-	printf("2 - Affecter une nouvelle place : \n");
-	scanf("%s", choix);
-
-	switch (atoi(choix))
+	while (boo == 1)
 	{
-	case 1:
-		printf("L'id de la place ");
-		scanf("%s", livre);
+		printf("Menu : \n");
+		printf("1 - Affecter une nouvelle place : \n");
+		printf("=> ");
+		scanf("%s", choix);
 
-		verif(atoi(livre));
-		break ;
+		switch (atoi(choix))
+		{
+		case 1:
+			printf("Le type de place(1,2,3)\n");
+			printf("1 - Véhicule \n");
+			printf("2 - Moto \n");
+			printf("3 - Camion \n");
+			printf("=> ");
+			scanf("%s", livre);
+			place(atoi(livre));
+			break ;
+		}
 
-	//case 2:
-		//printf("%d", verif(1));
-		//verif(1);
+		printf("Voulez-vous continuer ? (0 ou 1) \n");
+		printf("=> ");
+		scanf("%d", &boo);
 	}
-
 	return (0);
 }
