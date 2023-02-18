@@ -1,5 +1,5 @@
-#include "../sqlite/sqlite3.h"
-#include "./header.h"
+#include "sqlite3.h"
+#include "header.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -47,7 +47,7 @@ int	factures(int a, int b)
 	snprintf(sql2, sz2 + 1, "SELECT * FROM Factures WHERE Id in (select max(Id) from factures)");
 	
 	//work
-	rc = sqlite3_open("../sqlite/parking.db", &db);
+	rc = sqlite3_open("./parking.db", &db);
 	if (rc != SQLITE_OK)
 	{
 		fprintf(stderr, "Cannot open database: %s\n", sqlite3_errmsg(db));

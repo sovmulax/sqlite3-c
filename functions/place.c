@@ -1,5 +1,5 @@
-#include "../sqlite/sqlite3.h"
-#include "./header.h"
+#include "sqlite3.h"
+#include "header.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,7 +26,7 @@ int	place(int az, int b)
 	sql = (char *)malloc(sz + 1);
 	snprintf(sql, sz + 1, "UPDATE Place SET Place = %d WHERE Id = %d;", aaa, bbb);
 	//others
-	rc = sqlite3_open("../sqlite/parking.db", &db);
+	rc = sqlite3_open("./parking.db", &db);
 	if (rc != SQLITE_OK)
 	{
 		fprintf(stderr, "Cannot open database: %s\n", sqlite3_errmsg(db));
@@ -67,7 +67,7 @@ int	verif(int a)
 	sql2 = (char *)malloc(sz2 + 1);
 	snprintf(sql2, sz2 + 1, "SELECT Id ,Place FROM Place WHERE Id = 3");
 	//work
-	rc = sqlite3_open("../sqlitE/parking.db", &db);
+	rc = sqlite3_open("./parking.db", &db);
 	if (rc != SQLITE_OK)
 	{
 		fprintf(stderr, "Cannot open database: %s\n", sqlite3_errmsg(db));

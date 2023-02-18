@@ -1,4 +1,4 @@
-#include "../sqlite/sqlite3.h"
+#include "sqlite3.h"
 #include "header.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,6 +49,10 @@ int	main(int argc, char *argv[])
 		printf("Voulez-vous continuer ? (0 ou 1) \n");
 		printf("=> ");
 		scanf("%d", &boo);
+
+		if(boo == 0){
+			return 0;
+		}
 	}
 	return (0);
 }
