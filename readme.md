@@ -16,4 +16,6 @@ Librairie static (fonctions de gestions) :
   - Moto
   - Camion
 
-## L'exécutable se trouve dans le dossier /functions
+## Lancer la commande : make all
+
+## Pour exécuter le projet
